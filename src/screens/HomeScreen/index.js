@@ -1,11 +1,13 @@
 import React from 'react';
-import {Text, StyleSheet} from 'react-native';
+import {StyleSheet} from 'react-native';
+import Feed from '../../components/Feed';
 
 const HomeScreen = () => {
-    return(
-        <Text>Hello There</Text>
-    )
-  
+  return (
+    <>
+      <Feed />
+    </>
+  );
 };
 export default HomeScreen;
 const styles = StyleSheet.create({});
