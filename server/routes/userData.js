@@ -1,6 +1,6 @@
 const express = require('express');
 const {check, validationResult} = require('express-validator');
-const UserData = require('../models/House');
+const UserData = require('../models/Data');
 const router = express.Router();
 
 const validate = [
@@ -45,7 +45,7 @@ router.get('/', (req, res) => {
     .catch((err) => console.log(err));
 });
 
-// api/houses/id
+// api/userData/id
 router.get('/:id', (req, res) => {
   const userID = req.params.id;
   UserData.findById(userID)
@@ -55,7 +55,7 @@ router.get('/:id', (req, res) => {
     .catch((err) => console.log(err));
 });
 
-// api/houses/id  - update existing id data
+// api/userData/id  - update existing id data
 router.put('/:id', (req, res) => {
   const userID = req.params.id;
   UserData.findById(userID)

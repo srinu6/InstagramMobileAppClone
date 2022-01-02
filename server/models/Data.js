@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 //Schema
-const HouseSchema = new mongoose.Schema({
+const UserData = new mongoose.Schema({
   userName: {type: String, required: true},
   userImageUri: {type: String, required: true},
   postImageUri: {type: String, required: true},
@@ -13,4 +13,4 @@ const HouseSchema = new mongoose.Schema({
 });
 
 // create model
-module.exports = mongoose.model('House', HouseSchema);
+module.exports = mongoose.model('Data', UserData);
