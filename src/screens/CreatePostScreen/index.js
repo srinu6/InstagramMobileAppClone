@@ -49,7 +49,7 @@ export default function ContactsApp() {
           fontWeight: 'bold',
           marginBottom: 20,
         }}>
-        Our Contacts App
+        Create Post
       </Text>
       <TextInput
         style={{
@@ -71,12 +71,24 @@ export default function ContactsApp() {
           marginBottom: 20,
           paddingLeft: 5,
         }}
-        placeholder="Number"
+        placeholder="Description"
+        onChangeText={(text) => handleChangeName(text)}
+        value={contact.name}
+      />
+      <TextInput
+        style={{
+          borderWidth: 1,
+          borderColor: 'black',
+          height: 30,
+          marginBottom: 20,
+          paddingLeft: 5,
+        }}
+        placeholder="Image URL"
         onChangeText={(text) => handleChangeNumber(text)}
         value={contact.number}
       />
       <View style={{backgroundColor: 'black'}}>
-        <Button title="Add Contact" onPress={() => submitContact()} />
+        <Button title="Create New Post" onPress={() => submitContact()} />
       </View>
       <Text
         style={{
@@ -86,7 +98,7 @@ export default function ContactsApp() {
           marginBottom: 20,
           marginTop: 50,
         }}>
-        My Contacts
+        My Posts
       </Text>
       {contacts.map((contact) => {
         if (

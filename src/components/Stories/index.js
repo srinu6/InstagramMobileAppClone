@@ -46,7 +46,7 @@ const Stories = () => {
       style={styles.container}
       showsHorizontalScrollIndicator={false}
       renderItem={({item}) => (
-        <Story imageUri={item.userImageUri} name={item.userName.slice(0, 8)} />
+        <Story imageUri={item.userImageUri} name={item.userName} />
       )}
     />
   );

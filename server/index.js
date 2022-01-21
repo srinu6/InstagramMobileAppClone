@@ -7,7 +7,7 @@ const app = express();
 app.use(express.json());
 
 app.get('/', (req, res) => {
-  res.send('Welcome to house listing API');
+  res.send('Welcome to Instagram clone listing API');
 });
 
 app.use('/api/userData', userData);
