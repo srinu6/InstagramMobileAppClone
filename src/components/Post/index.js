@@ -5,10 +5,11 @@ import Footer from './components/Footer';
 import Header from './components/Header';
 
 const Post = ({post}) => {
+  console.log(post, 'details');
   return (
     <View>
-      <Header imageUri={post.user.imageUri} name={post.user.name} />
-      <Body imageUri={post.imageUri} />
+      <Header imageUri={post.userImageUri} name={post.userName} />
+      <Body imageUri={post.postImageUri} />
       <Footer
         caption={post.caption}
         postedAt={post.postedAt}
